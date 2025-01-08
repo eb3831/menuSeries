@@ -166,7 +166,6 @@ public class Activity2 extends AppCompatActivity implements View.OnCreateContext
             tvChoice.setText("sum = " + sumSeries());
             return true;
         }
-
         return super.onContextItemSelected(item);
     }
 

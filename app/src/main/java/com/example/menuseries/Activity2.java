@@ -68,6 +68,12 @@ public class Activity2 extends AppCompatActivity implements View.OnCreateContext
         lv.setAdapter(adp);
     }
 
+    /**
+     *            the function changes the format of the numbers that are either too small or too large
+     *
+     * @param term The number to be formatted
+     * @return A string representation of the number in the appropriate format.
+     */
     public static String differentView(double term)
     {
         if (term % 1 == 0 && Math.abs(term) < 10000)
@@ -103,7 +109,11 @@ public class Activity2 extends AppCompatActivity implements View.OnCreateContext
         return String.format("%.3f * 10^%d", coefficient, exponent);
     }
 
-
+    /**
+     *          the function calculates and returns the sum of the series based on its type.
+     *
+     * @return the sum of the series
+     */
     private double sumSeries()
     {
         if (seriesType == 0)
@@ -116,14 +126,21 @@ public class Activity2 extends AppCompatActivity implements View.OnCreateContext
         }
     }
 
-
+    /**
+     * the function finishes the activity
+     * @param view The view that triggered the click event
+     */
     public void clickedBack(View view)
     {
         finish();
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+    /**
+     * the function creates a menu
+     */
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)
+    {
         super.onCreateContextMenu(menu, v, menuInfo);
 
         menu.setHeaderTitle("Choose Option");
@@ -132,6 +149,10 @@ public class Activity2 extends AppCompatActivity implements View.OnCreateContext
     }
 
     @Override
+    /**
+     * the function The function handles the selection of an item from the context menu and performs
+     * an action based on the selection.
+     */
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         String choice = item.getTitle().toString();
 
@@ -150,7 +171,12 @@ public class Activity2 extends AppCompatActivity implements View.OnCreateContext
     }
 
     @Override
-    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+    /**
+     * the function  Handles a long click on an item in the listView
+     * and Sets the position variable to the item’s index + 1.
+     */
+    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l)
+    {
         position = i + 1;
         return false;
     }

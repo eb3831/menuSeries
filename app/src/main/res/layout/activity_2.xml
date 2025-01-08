@@ -29,7 +29,7 @@
             android:layout_height="0dp"
             android:layout_gravity="bottom|left"
             android:layout_weight="7"
-            android:backgroundTint="#FF8A80"
+            android:backgroundTint="#7986CB"
             android:gravity="center"
             android:onClick="clickedBack"
             android:text="BACK"

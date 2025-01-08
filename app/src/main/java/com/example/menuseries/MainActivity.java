@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity
         sw = findViewById(R.id.sw);
     }
 
+
+    /**
+     *              the function checks if the imput from the user is valid
+     * @param input the input from the user
+     * @return true if valid num else false
+     */
     public boolean isValidNum(String input)
     {
         return !((input.equals("")) ||
@@ -47,6 +53,11 @@ public class MainActivity extends AppCompatActivity
                 (input.equals("-.")));
     }
 
+    /**
+     *              The function checks whether the switch is on or off
+     *              and changes the series type and the hint of etDifference accordingly.
+     * @param view The view that triggered the click event
+     */
     public void clickedSwitch(View view)
     {
         if (sw.isChecked())
@@ -62,7 +73,12 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
+    /**
+     *      `       the function Handles the click event for the "Next" button.
+     *              Validates the input values, extracts the data,
+     *              and starts a new activity with the provided parameters.
+     * @param view The view that triggered the click event
+     */
     public void clickedNext(View view)
     {
         if (isValidNum(etA1.getText().toString())
